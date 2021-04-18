@@ -5,7 +5,10 @@
   :ensure t
   :init (global-flycheck-mode))
 
-
+(add-hook 'c++-mode-hook
+	  (lambda ()(setq flycheck-gcc-language-standard "c++20")))
+(add-hook 'c++-mode-hook
+	  (lambda ()(setq flycheck-clang-language-standard "c++20")))
 
 ;;(custom-set-variables
 ;; ;; custom-set-variables was added by Custom.

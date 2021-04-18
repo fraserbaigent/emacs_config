@@ -1,0 +1,41 @@
+# -*- mode: snippet -*-
+# name: source11
+# key: src11
+# group: c++11
+# contributor: Fraser Baigent
+# desc: Simple class to create all ctor/dtor in the source file
+# --
+
+#include \"${1:Header}\"
+
+${2:Name}::${2:$(yas-c++-class-name yas-text)}
+() {
+};
+
+${2:$(yas-c++-class-name yas-text)}::~${2:$(yas-c++-class-name yas-text)}
+() {
+};
+
+${2:$(yas-c++-class-name yas-text)}::${2:$(yas-c++-class-name yas-text)}
+(${2:$(yas-c++-class-name yas-text)} const& other) noexcept {
+};
+
+${2:$(yas-c++-class-name yas-text)}::${2:$(yas-c++-class-name yas-text)}
+(${2:$(yas-c++-class-name yas-text)}&& other) noexcept {
+};
+
+${2:$(yas-c++-class-name yas-text)}&
+${2:$(yas-c++-class-name yas-text)}::operator=
+(${2:$(yas-c++-class-name yas-text)} const& other) noexcept {
+    if (this != &other) {
+    };
+    return *this;
+};
+
+${2:$(yas-c++-class-name yas-text)}&
+${2:$(yas-c++-class-name yas-text)}::operator=
+(${2:$(yas-c++-class-name yas-text)}&& other) noexcept {
+    if (this != &other) {
+    };
+    return *this;
+};
