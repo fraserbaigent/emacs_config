@@ -30,7 +30,7 @@
    '("f144b9096708037ad68674f644a2a6b99d68b6c362fe7706d759d74afb1f526e" "eb25c68d3959c31d34021aa722d5ea1c53ea69714580b2b8c150592becf412cf" default))
  '(inhibit-startup-screen t)
  '(org-agenda-files
-   '("~/org/holidays.org" "~/org/inventory.org" "~/org/master.org" "~/org/new_document.org"))
+   '( "~/org/master.org"))
  '(org-startup-truncated nil)
  '(package-selected-packages
    '(pdf-tools openwith clang-format rtags org-alert phps-mode flycheck company)))

@@ -1,3 +1,6 @@
+;;; custom.el --- Summary
+;;; Commentary:
+;;; Code:
 (set-default 'truncate-lines t)
 (custom-set-variables
  '(ansi-color-faces-vector
@@ -14,4 +17,11 @@
  '(font-lock-comment-face ((t (:foreground "green"))))
  '(link-visited ((t (:inherit link :foreground "dark red"))))
  '(shadow ((t (:foreground "red")))))
+
+(global-set-key (kbd "C-x O") (lambda ()
+                                (interactive)
+                                (other-window -1)))
+(provide 'custom)
+;;; custom.el ends here
+
 
