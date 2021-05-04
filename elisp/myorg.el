@@ -2,23 +2,34 @@
 ;;; Commentary:
 ;;; Code:
 (require 'org)
+
+;; Global custom keymappings for org
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
+
+;; OrgMods custom keymappings
+(with-eval-after-load 'org
+  '(define-key  org-mode-map "C-x C-g" 'org-sort o))
+
+;; Mark timestamp when TODO moves to DONE
 (setq org-log-done t)
 
+;; Manually define org keywords and formatting
 (setq org-todo-keywords
       '((sequence "TODO" "ONGOING" "SHELVED" "|""DONE" "SCRAPPED" ))
       )
 
-(setq org-todo-keyword-faces '(("TODO" . (:foreground "red" :weight bold :strikethrough "green" ))
+(setq org-todo-keyword-faces '(("TODO" . (:foreground "red" :weight bold))
 			       ("ONGOING" . (:foreground "orange"))
 			       ("SHELVED" . (:foreground "magenta"))
 			       ("DONE" . (:foreground "green" :weight bold))
-			       ("SCRAPPED" . (:foreground "#2a702c" :weight bold)))
+			       ("SCRAPPED" . (:foreground "#2a702c" :weight bold :strike-through "red" )))
       )
 
+;; Set the directory where we store the .org files for the agenda
 (setq org-agenda-files (directory-files-recursively "~/org/" "\\.org$"))
 
+;; Open all org files with evince
 (require 'openwith)
 (openwith-mode t)
 (setq openwith-associations '(("\\.pdf\\'" "evince" (file))))
