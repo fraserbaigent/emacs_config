@@ -18,6 +18,11 @@
  '(link-visited ((t (:inherit link :foreground "dark red"))))
  '(shadow ((t (:foreground "red")))))
 
+(add-to-list 'default-frame-alist
+             '(vertical-scroll-bars . nil))
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+
 (global-set-key (kbd "C-x O") (lambda ()
                                 (interactive)
                                 (other-window -1)))

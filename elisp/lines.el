@@ -1,5 +1,6 @@
-;; edits 30/09/2018
-(toggle-scroll-bar -1)
+;;; lines --- Summary
+;;; Commentary:
+;;; Code:
 (tool-bar-mode -1)
 (put 'upcase-region 'disabled nil)
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 2)))
@@ -24,3 +25,5 @@
 
 (add-hook 'prog-mode-hook #'whitespace-mode)
 (add-hook 'org-mode-hook #'whitespace-mode)
+(provide 'lines)
+;;; lines.el ends here
