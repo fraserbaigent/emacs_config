@@ -29,6 +29,11 @@
 ;; Set the directory where we store the .org files for the agenda
 (setq org-agenda-files (directory-files-recursively "~/org/" "\\.org$"))
 
+;; Show a moving window of 5 days in the future 3 in the past
+(setq org-agenda-span 8
+      org-agenda-start-on-weekday nil
+      org-agenda-start-day "-3d")
+
 ;; Open all org files with evince
 (require 'openwith)
 (openwith-mode t)
